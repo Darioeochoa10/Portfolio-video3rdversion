@@ -122,3 +122,39 @@ p {
 #contact p {
   font-size: 18px;
 }
+/* Animación para el fondo del encabezado */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Aplicar la animación al encabezado */
+header {
+  text-align: center;
+  padding: 50px 0;
+  color: #fff; /* Texto blanco */
+  background: linear-gradient(
+    45deg,
+    #235789,
+    #122b4b,
+    #235789
+  ); /* Gradiente de colores azules suaves */
+  background-size: 400% 400%; /* Aumentar el tamaño del fondo para permitir la animación */
+  animation: gradientAnimation 20s infinite; /* Duración de la animación: 20 segundos, repetición infinita */
+  transition: background-color 1s ease; /* Transición de color */
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5),
+    0 0 100px rgba(255, 255, 255, 0.2) inset; /* Sombra exterior e interior */
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra de texto */
+}
