@@ -1,200 +1,124 @@
+/* Estilos generales */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0f24;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
+/* Estilos para el encabezado */
 header {
-  background-color: #0d1b2a;
-  padding: 1em;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 0;
+  background-color: #0d1b2a; /* Azul oscuro */
+  color: #fff; /* Texto blanco */
 }
 
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.logo-container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
-header nav ul li {
-  margin: 0 1em;
-}
-
-header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #4da8da;
-}
-
-section {
-  padding: 4em 2em;
-  text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-#about h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  color: #4da8da;
-  animation: slideInLeft 1s ease-in-out;
-}
-
-#about p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.logos img {
+.logo-container img {
   width: 50px;
   margin: 0 10px;
-  transition: transform 0.3s;
 }
 
-.logos img:hover {
-  transform: scale(1.2);
-}
-
-#portfolio h2,
-#contact h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  color: #4da8da;
-}
-
-.portfolio-carousel {
-  margin-bottom: 4em;
-}
-
-.portfolio-carousel h2 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  color: #4da8da;
-}
-
-.carousel {
-  position: relative;
-  width: 80%;
-  margin: 2em auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-items {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-items iframe {
-  flex: 0 0 100%;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.carousel-items iframe.current {
-  transform: scale(1.1);
-  opacity: 1;
-  z-index: 1;
-}
-
-.carousel-items iframe:not(.current) {
-  opacity: 0.5;
-}
-
-.prev,
-.next {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  transition: background-color 0.3s;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
+/* Estilos para la sección de Portfolio */
 #portfolio {
-  padding: 4em 2em;
+  background-color: #08101a; /* Azul oscuro más intenso */
+  color: #fff;
+  padding: 50px 0;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
-  background: linear-gradient(-45deg, #090b26, #0d1448, #081437, #0c1e5a);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+#portfolio h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
-#portfolio:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
-  animation: waveAnimation 4s linear infinite;
+/* Estilos para el contenedor del carrusel */
+.carousel-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  overflow: hidden; /* Ocultar el desbordamiento horizontal */
 }
 
-@keyframes waveAnimation {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-25%) rotate(-5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+.video-carousel {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+}
+
+/* Estilos para los videos dentro del carrusel */
+.video-container {
+  width: 300px;
+  margin-right: 20px;
+  scroll-snap-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra suave */
+}
+
+.video-container:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para los botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#prev-video,
+#next-video,
+#prev-video-2,
+#next-video-2 {
+  background-color: #1a2c43; /* Azul más oscuro */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none; /* Eliminar el borde predeterminado */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px; /* Espacio entre los botones */
+}
+
+#prev-video:hover,
+#next-video:hover,
+#prev-video-2:hover,
+#next-video-2:hover {
+  background-color: #3a506b; /* Azul medio */
+}
+
+/* Estilos para la sección de contacto */
+#contact {
+  background-color: #0d1b2a; /* Azul oscuro */
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 18px;
 }

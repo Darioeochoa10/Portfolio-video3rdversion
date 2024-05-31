@@ -1,81 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dario Enrique Ochoa - Editor de Video</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>Dario Enrique Ochoa - Editor de Video</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="about">
       <h1>Dario Enrique Ochoa</h1>
       <p>
-        Editor de video especializado en After Effects, Premiere Pro, Photoshop
-        y Canvas.
+        Editor de Video Especializado en After Effects, Premiere Pro, Photoshop
+        y Canvas
       </p>
-      <div class="logos">
-        <img src="after-effects-logo.png" alt="After Effects" />
-        <img src="premiere-pro-logo.png" alt="Premiere Pro" />
-        <img src="photoshop-logo.png" alt="Photoshop" />
-        <img src="canvas-logo.png" alt="Canvas" />
+      <div class="logo-container">
+        <img src="aftereffects.png" alt="After Effects" />
+        <img src="premierepro.png" alt="Premiere Pro" />
+        <img src="photoshop.png" alt="Photoshop" />
+        <img src="canvas.png" alt="Canvas" />
       </div>
-    </section>
+    </header>
 
     <section id="portfolio">
-      <div class="portfolio-carousel">
-        <h2>Portfolio 1</h2>
-        <div class="carousel" id="carousel1">
-          <button class="prev" onclick="prevSlide('carousel1')">
-            &#10094;
-          </button>
-          <div class="carousel-items">
-            <iframe
-              src="https://drive.google.com/file/d/VIDEO_ID/preview"
-              frameborder="0"
-            ></iframe>
-            <!-- Añade más videos aquí -->
-          </div>
-          <button class="next" onclick="nextSlide('carousel1')">
-            &#10095;
-          </button>
+      <h2>Portfolio</h2>
+      <!-- Primer carrusel -->
+      <div class="carousel-container">
+        <div class="video-carousel">
+          <!-- Videos serán cargados dinámicamente aquí -->
         </div>
       </div>
-      <div class="portfolio-carousel">
-        <h2>Portfolio 2</h2>
-        <div class="carousel" id="carousel2">
-          <button class="prev" onclick="prevSlide('carousel2')">
-            &#10094;
-          </button>
-          <div class="carousel-items">
-            <iframe
-              src="https://drive.google.com/file/d/VIDEO_ID/preview"
-              frameborder="0"
-            ></iframe>
-            <!-- Añade más videos aquí -->
-          </div>
-          <button class="next" onclick="nextSlide('carousel2')">
-            &#10095;
-          </button>
+      <!-- Contenedor para los botones del primer carrusel -->
+      <div class="button-container">
+        <button id="prev-video">Anterior</button>
+        <button id="next-video">Siguiente</button>
+      </div>
+      <!-- Segundo carrusel -->
+      <div class="carousel-container">
+        <div class="video-carousel">
+          <!-- Videos para el segundo carrusel serán cargados dinámicamente aquí -->
         </div>
+      </div>
+      <!-- Contenedor para los botones del segundo carrusel -->
+      <div class="button-container">
+        <button id="prev-video-2">Anterior</button>
+        <button id="next-video-2">Siguiente</button>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contacto</h2>
-      <p>Tu información de contacto aquí.</p>
-      <p>
-        Descarga mi resume: <a href="resume.pdf" download>Descargar Resume</a>
-      </p>
+      <h2>Contacto y Resumen</h2>
+      <p>Aquí va tu información de contacto y resumen.</p>
     </section>
 
     <script src="scripts.js"></script>
